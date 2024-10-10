@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient List (GDPR)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>New Patient Form</h1><br>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="newpatient.html">New Patient</a></li>
+                <li><a href="orderform.html">Order Form</a></li>
+                <li><a href="patientlist.html">Patient List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form id="patientForm" class="patientForm" action="/submit-patient" method="POST">
+        <label class="required" for="Location">Location</label>
+        <select id="location" name="location" required>
+            <option value="Test">Test</option>
+            <option value="Superhero">Superhero</option>
+            <option value="Real Life">Real Life</option>
+        </select>
+        
+        <label class="required" for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        
+        <label class="required" for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        
+        <label for="middleName">Middle Name:</label>
+        <input type="text" id="middleName" name="middleName">
+        
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+        
+        <label class="required" for="dateOfBirth">Date of Birth (YYYY-MM-DD):</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+        
+        <label class="required" for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        
+        <label class="required" for="address1">Address 1:</label>
+        <input type="text" id="address1" name="address1" required>
+        
+        <label for="address2">Address 2:</label>
+        <input type="text" id="address2" name="address2">
+        
+        <label class="required" for="addressCity">City:</label>
+        <input type="text" id="addressCity" name="addressCity" required>
+        
+        <label for="addressState">State:</label>
+        <input type="text" id="addressState" name="addressState">
+        
+        <label class="required" for="addressPostCode">Postal Code:</label>
+        <input type="text" id="addressPostCode" name="addressPostCode" required>
+        
+        <label class="required" for="addressCountry">Country:</label>
+        <input type="text" id="addressCountry" name="addressCountry" required>
+        
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber">
+        
+        <input type="hidden" name="unprocessed" value="0">
+        <h1><button type="submit">Submit</button></h1>
+    </form>
+    <br><br><br><br><br>
+    <footer class="footer">
+        <p>&copy; 2024 Mike Hadfield</p>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Order Request Form</h1><br>
+        <nav class="navigation">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="newpatient.html">New Patient</a></li>
+              <li><a href="orderform.html">Order Form</a></li>
+              <li><a href="patientlist.html">Patient List</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <form id="patientForm" class="patientForm" action="/submit-form" method="POST">
+        <input type="hidden" id="individualTests" name="individualTests">
+        <h1>Test order form</h1><br>
+        
+        <div>
+            <label class="required" for="patientId">Patient ID number:</label>
+            <input type="text" id="patientId" name="patientId" required>
+        </div>
+        
+        <div>
+            <label class="required" for="profileRequested">Profile requested:</label>
+            <select id="profileRequested" name="profileRequested" required>
+                <!-- Options will be dynamically populated by JavaScript -->
+            </select>
+        </div>
+      
+        <div>
+            <label for="comments">Additional Comments:</label>
+            <input type="text" id="comments" name="comments">
+        </div>
+      
+        <div style="display: flex; align-items: center;">
+            <label style="margin-right: 10px;" class="required">Urgent:</label>
+            <div class="radioGroup">
+                <input type="radio" id="urgentYes" name="urgent" value="yes" required>
+                <label for="urgentYes">Yes</label>
+                <input type="radio" id="urgentNo" name="urgent" value="no" required>
+                <label for="urgentNo">No</label>
+            </div>
+        </div>
+        
+        <h1><button type="submit">Submit</button></h1>
+    </form>
+
+    <footer class="footer">
+        <p>&copy; 2024 Mike Hadfield</p>
+    </footer>    
+
+    <script src="javascript.js"></script>
+</body>
+</html>

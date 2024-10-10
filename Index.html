@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Patient Management System</h1><br>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="newpatient.html">New Patient</a></li>
+                <li><a href="orderform.html">Order Form</a></li>
+                <li><a href="patientlist.html">Patient List</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main-content">
+        <section class="explanation">
+            <h2>Explanation</h2>
+            <p>This page is for me to try and get more familiar with MirthConnect. The forms on this site use NodeJS to send the information into a local MSSQL database. This is purely so I can get a few tables going, and use database readers in MirthConnect to try and do some stuff.</p>
+            <p>The new patient form will generate a new entry in the "newpatients" table and assign them a unique hospital number. Mirth will then process that row, generate an ADT message and update the request demographics table with patient information. Similarly, the order form will send a request to an orders table, which Mirth then pulls to generate an OBR.</p>
+            <p>Next up I want to try and fudge some "analyser" interfacing, send those OBRs off to another interface which pretends to run it, (somehow) generate results, and then post the results back to the database.</p>
+            <p>I don't know, just seeing what happens really.</p>
+            <p>Oh and if you're looking at the source code on GitHub, most of it is disgusting. The vast majority of the JavaScript, HTML, and CSS is AI generated, but I don't know what you expected.</p>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Mike Hadfield</p>
+    </footer>
+</body>
+</html>
