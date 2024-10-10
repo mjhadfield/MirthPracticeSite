@@ -28,6 +28,20 @@ sql.connect(config, (err) => {
 
 const app = express();
 
+// Establish a connection pool
+let poolPromise;
+
+async function initDbPool() {
+  try {
+    poolPromise = await sql.connect(config);
+    console.log('Connected to the SQL Server database.');
+  } catch (err) {
+    console.error('Error connecting to the SQL Server database:', err);
+  }
+}
+
+initDbPool();
+
 // Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
 
